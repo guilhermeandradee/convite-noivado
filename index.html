@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite de Noivado — Ysabele & Guilherme</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Icons (Phosphor Icons) -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    /* Global Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background-color: #F7F3EC;
+      color: #31413E;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .font-serif-custom {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Container */
+    .app-container {
+      width: 100%;
+      max-width: 390px;
+      background-color: #F7F3EC;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    }
+
+    /* SVG Wave Divider */
+    .wave-divider {
+      width: 100%;
+      height: 18px;
+      display: block;
+    }
+
+    /* Polaroid Shadow */
+    .shadow-polaroid {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Section 1: Hero / Apresentação */
+    .hero-section {
+      position: relative;
+      background-color: #466C69;
+      color: #ffffff;
+      height: 820px;
+      padding: 20px 20px 32px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .bg-overlay-img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.7;
+      background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800');
+    }
+
+    .bg-overlay-dark {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(49, 65, 62, 0.4);
+    }
+
+    .hero-header {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .monogram-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .monogram-text {
+      font-weight: 600;
+      font-size: 20px;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-confirm-top {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-confirm-top:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+    }
+
+    .tag-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tag-line {
+      width: 34px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .tag-text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .hero-title {
+      font-weight: 500;
+      font-size: 58px;
+      line-height: 86%;
+      color: #ffffff;
+      letter-spacing: -2px;
+      white-space: pre-line;
+    }
+
+    .hero-date {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .decorative-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #EAD9BE;
+    }
+
+    .hero-scroll-desc {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 145%;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 250px;
+    }
+
+    .wave-bottom-wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    /* Section 2: Nossa História */
+    .history-section {
+      background-color: #F7F3EC;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .history-intro {
+      padding: 76px 24px 64px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .history-intro-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sub-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6F9591;
+    }
+
+    .section-title {
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 1.25;
+      color: #31413E;
+    }
+
+    .history-text {
+      margin-top: 28px;
+      font-size: 15px;
+      line-height: 165%;
+      color: #6F7C76;
+      text-align: center;
+      max-width: 342px;
+    }
+
+    .couple-photo-banner {
+      width: 330px;
+      height: 409px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      margin: 8px 0;
+    }
+
+    .couple-photo-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .family-message-box {
+      width: 100%;
+      background-color: #6F9591;
+      color: #ffffff;
+      padding: 64px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+      position: relative;
+      margin-top: 48px;
+    }
+
+    .symbol-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: #FFFDFC;
+      color: #6F9591;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-text {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 118%;
+      color: #ffffff;
+      max-width: 342px;
+    }
+
+    .separator-line {
+      width: 44px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .gratitude-text {
+      font-size: 14px;
+      line-height: 165%;
+      color: #FFFDFC;
+      max-width: 342px;
+    }
+
+    .signature-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 8px;
+    }
+
+    .sig-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .signature-text {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 18px;
+      color: #FFFDFC;
+    }
+
+    /* Photo Gallery */
+    .gallery-container {
+      width: 100%;
+      padding: 32px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-header {
+      padding: 32px 24px 24px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gallery-header .sub-tag {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+    }
+
+    .gallery-header .section-title {
+      font-size: 26px;
+      line-height: 110%;
+    }
+
+    .gallery-rows {
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .gallery-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .polaroid-card {
+      background-color: #ffffff;
+      padding: 8px 8px 20px 8px;
+      border-radius: 2px;
+      width: 163px;
+      transition: transform 0.3s ease;
+    }
+
+    .polaroid-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 1px;
+    }
+
+    .rot-1 { transform: rotate(1.8deg); }
+    .rot-1:hover { transform: rotate(0deg); }
+
+    .rot-2:hover { transform: scale(1.05); }
+
+    .rot-3 { transform: rotate(-1.5deg); }
+    .rot-3:hover { transform: rotate(0deg); }
+
+    .rot-4 { transform: rotate(1.2deg); }
+    .rot-4:hover { transform: rotate(0deg); }
+
+    .rot-5 { transform: rotate(-2deg); }
+    .rot-5:hover { transform: rotate(0deg); }
+
+    .rot-6 { transform: rotate(2deg); }
+    .rot-6:hover { transform: rotate(0deg); }
+
+    .btn-see-more {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #6F9591;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .btn-see-more:hover {
+      color: #31413E;
+    }
+
+    /* Section 3: Convite */
+    .invite-section {
+      background-color: #F7F3EC;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .invite-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .invite-header .section-title {
+      font-size: 36px;
+      line-height: 105%;
+      white-space: pre-line;
+    }
+
+    .event-card {
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(234, 217, 190, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .card-icon-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F7F3EC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6F9591;
+    }
+
+    .card-intro-text {
+      font-size: 13px;
+      color: #6F7C76;
+    }
+
+    .event-type-title {
+      font-weight: 600;
+      font-size: 38px;
+      color: #31413E;
+      letter-spacing: 0.025em;
+    }
+
+    .card-divider {
+      width: 100%;
+      height: 1px;
+      background-color: rgba(234, 217, 190, 0.6);
+    }
+
+    .date-grid {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 8px 0;
+    }
+
+    .date-col {
+      text-align: center;
+    }
+
+    .date-day-name {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6F7C76;
+    }
+
+    .date-month {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #31413E;
+    }
+
+    .date-v-divider {
+      height: 32px;
+      width: 1px;
+      background-color: #EAD9BE;
+    }
+
+    .date-day-number {
+      font-weight: 700;
+      font-size: 48px;
+      color: #31413E;
+      line-height: 1;
+    }
+
+    .date-year {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #31413E;
+    }
+
+    .date-time {
+      display: block;
+      font-size: 12px;
+      color: #6F7C76;
+    }
+
+    .location-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .venue-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: #31413E;
+    }
+
+    .venue-address {
+      font-size: 12px;
+      color: #6F7C76;
+      line-height: 1.625;
+    }
+
+    .dress-code-badge {
+      background-color: #F7F3EC;
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #31413E;
+    }
+
+    .dress-code-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #6F9591;
+    }
+
+    .dress-code-text {
+      font-weight: 500;
+    }
+
+    /* Section 4: Local e Orientações */
+    .location-section {
+      background-color: #F7F3EC;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .venue-image-box {
+      width: 100%;
+      height: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      margin-bottom: 24px;
+    }
+
+    .venue-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .btn-map {
+      width: 100%;
+      background-color: #6F9591;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.025em;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      margin-bottom: 32px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-map:hover {
+      background-color: #5b7d7a;
+    }
+
+    .features-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .features-title {
+      font-weight: 500;
+      font-size: 24px;
+      color: #31413E;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .feature-card {
+      background-color: #ffffff;
+      padding: 16px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(234, 217, 190, 0.3);
+    }
+
+    .feature-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background-color: #F7F3EC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6F9591;
+      flex-shrink: 0;
+    }
+
+    .feature-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: #31413E;
+    }
+
+    .feature-desc {
+      font-size: 12px;
+      color: #6F7C76;
+    }
+
+    /* Section 5: Recado confirmação presença */
+    .recadoconfirmacao-section {
+      background-color: #DDECF0;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .recadoconfirmacao-section .sub-tag {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+    }
+
+    .recadoconfirmacao-section .recadoconfirmacao-title {
+      font-size: 28px;
+    }
+
+    .recadoconfirmacao-divider {
+      width: 48px;
+      height: 1px;
+      background-color: rgba(111, 149, 145, 0.4);
+      margin: 8px 0;
+    }
+
+    .recadoconfirmacao-desc {
+      font-size: 13px;
+      line-height: 165%;
+      color: #6F7C76;
+      max-width: 320px;
+    }
+
+    .guest-box {
+      background-color: #F7F3EC;
+      padding: 16px;
+      border-radius: 12px;
+      width: 100%;
+      text-align: left;
+      margin: 8px 0;
+      border: 1px solid rgba(234, 217, 190, 0.5);
+    }
+
+    .guest-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #31413E;
+      margin-bottom: 8px;
+    }
+
+    .guest-list {
+      list-style: none;
+      font-size: 12px;
+      color: #6F7C76;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .guest-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .recadoconfirmacao-footer-note {
+      font-size: 12px;
+      font-style: italic;
+      color: #6F7C76;
+    }
+
+    /* Section 5: Seleção a Dedo / Mensagem à Família */
+    .selection-section {
+      background-color: #FFFDFC;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .selection-section .sub-tag {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+    }
+
+    .selection-section .section-title {
+      font-size: 28px;
+    }
+
+    .selection-divider {
+      width: 48px;
+      height: 1px;
+      background-color: rgba(111, 149, 145, 0.4);
+      margin: 8px 0;
+    }
+
+    .selection-desc {
+      font-size: 13px;
+      line-height: 165%;
+      color: #6F7C76;
+      max-width: 320px;
+    }
+
+    .guest-box {
+      background-color: #F7F3EC;
+      padding: 16px;
+      border-radius: 12px;
+      width: 100%;
+      text-align: left;
+      margin: 8px 0;
+      border: 1px solid rgba(234, 217, 190, 0.5);
+    }
+
+    .guest-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #31413E;
+      margin-bottom: 8px;
+    }
+
+    .guest-list {
+      list-style: none;
+      font-size: 12px;
+      color: #6F7C76;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .guest-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .selection-footer-note {
+      font-size: 12px;
+      font-style: italic;
+      color: #6F7C76;
+    }
+
+    /* Section 6: Lista de Presentes */
+    .gifts-section {
+      background-color: #fff;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gift-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .gift-header .card-icon-badge {
+      background-color: #ffffff;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      margin: 0 auto;
+    }
+
+    .gift-header .section-title {
+      font-size: 32px;
+    }
+
+    .gift-intro {
+      font-size: 12px;
+      line-height: 160%;
+      color: #6F7C76;
+      max-width: 330px;
+    }
+
+    .gifts-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .gift-card {
+      background-color: #ffffff;
+      padding: 12px;
+      border-radius: 16px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      border: 1px solid rgba(234, 217, 190, 0.3);
+    }
+
+    .gift-img-box {
+      width: 100%;
+      height: 80px;
+      background-color: #F7F3EC;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6F9591;
+
+     object-fit: cover; 
+    }
+
+    .gift-name {
+      font-weight: 700;
+      font-size: 12px;
+      color: #31413E;
+      line-height: 1.25;
+    }
+
+    .gift-price {
+      font-size: 11px;
+      font-weight: 600;
+      color: #6F9591;
+      margin-top: 4px;
+    }
+
+    .btn-gift-list {
+      width: 100%;
+      background-color: #ffffff;
+      border: 1px solid #6F9591;
+      color: #6F9591;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      margin-bottom: 24px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-gift-list:hover {
+      background-color: #f9fafb;
+    }
+
+
+    .whatsapp-contact-btn {
+      display: flex;
+      align-items: center;
+
+      padding: 12px;
+      background-color: #EAD9BE;
+      border-radius: 15px;
+      width: 100%;
+      border-style: none;
+    }
+
+    .whatsapp-contact {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #6F7C76;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      width: 100%;
+      
+    }
+
+    /* Alterar para colocar icone */
+    .whatsapp-contact > span {
+      width: 100%;
+    }
+
+    .whatsapp-contact:hover {
+      color: #31413E;
+    }
+
+    .icon-whatsapp {
+      font-size: 18px;
+      color: #059669;
+    }
+
+    /* Section 7: RSVP / Confirmação de Presença */
+    .rsvp-section {
+      background-color: #F2E8D8;
+      color: #ffffff;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rsvp-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .rsvp-header .sub-tag {
+      color: #6F9591;
+    }
+
+    .rsvp-header .section-title {
+      font-size: 36px;
+      line-height: 1.25;
+      color: #31413E;
+      white-space: pre-line;
+    }
+
+    .rsvp-deadline {
+      font-size: 12px;
+      color: #6F9591;
+    }
+
+    .rsvp-form {
+      width: 100%;
+      background-color: #ffffff;
+      color: #31413E;
+      padding: 24px;
+      border-radius: 24px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .form-input {
+      width: 100%;
+      background-color: #F7F3EC;
+      border: 1px solid #EAD9BE;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 13px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .form-input:focus {
+      border-color: #6F9591;
+    }
+
+    .input-mb {
+      margin-bottom: 8px;
+    }
+
+    .radio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .radio-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 12px;
+      transition: background-color 0.2s ease;
+    }
+
+    .radio-card-active {
+      border: 1px solid #6F9591;
+      font-weight: 500;
+    }
+
+    .radio-card-active:hover {
+      background-color: rgba(111, 149, 145, 0.1);
+    }
+
+    .radio-card-inactive {
+      border: 1px solid #e5e7eb;
+      color: #6b7280;
+    }
+
+    .radio-card-inactive:hover {
+      background-color: #f9fafb;
+    }
+
+    .radio-card input[type="radio"] {
+      display: none;
+    }
+
+    .form-textarea {
+      width: 100%;
+      background-color: #F7F3EC;
+      border: 1px solid #EAD9BE;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 13px;
+      outline: none;
+      resize: none;
+      font-family: inherit;
+    }
+
+    .form-textarea:focus {
+      border-color: #6F9591;
+    }
+
+    .btn-submit-rsvp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      background-color: #6F9591;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      /* padding: 14px; */
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-top: 14px;
+      padding-top: 14px;
+
+      border-radius: 25px;
+      border: none;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-submit-rsvp:hover {
+      background-color: #5b7d7a;
+    }
+
+    /* Section 8: Encerramento e Rodapé */
+    .footer-section {
+      background-color: #F7F3EC;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .farewell-banner {
+      position: relative;
+      width: 100%;
+      height: 620px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .bg-banner-img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800');
+    }
+
+    .bg-banner-dark {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(49, 65, 62, 0.6);
+    }
+
+    .farewell-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .farewell-icon {
+      font-size: 30px;
+      color: #fde68a;
+    }
+
+    .farewell-title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 1.25;
+      white-space: pre-line;
+    }
+
+    .farewell-desc {
+      font-size: 13px;
+      line-height: 1.625;
+      max-width: 280px;
+      opacity: 0.9;
+    }
+
+    .farewell-couple-names {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 20px;
+      padding-top: 8px;
+    }
+
+    .footer-info {
+      padding: 40px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer-monogram {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #6F9591;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      color: #6F9591;
+      font-weight: 700;
+    }
+
+    .footer-date {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #31413E;
+      text-transform: uppercase;
+    }
+
+    .footer-thanks {
+      font-size: 12px;
+      color: #6F7C76;
+    }
+
+    .footer-heart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6F9591;
+      padding-top: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Container Mobile First 390px layout wrapped -->
+  <div class="app-container">
+    
+    <!-- ==================== 1. APRESENTAÇÃO ==================== -->
+    <section class="hero-section">
+      <!-- Background Image Overlay -->
+      <div class="bg-overlay-img"></div>
+      <div class="bg-overlay-dark"></div>
+
+      <!-- Navigation Bar -->
+      <header class="hero-header">
+        <!-- Monograma -->
+        <div class="monogram-circle">
+          <span class="monogram-text font-serif-custom">M · T</span>
+        </div>
+        <!-- Shortcut / Action -->
+        <a href="#rsvp" class="btn-confirm-top">
+          Confirmar
+        </a>
+      </header>
+
+      <!-- Main Hero Text Content -->
+      <div class="hero-content">
+        <!-- Ocasião Tag -->
+        <div class="tag-container">
+          <span class="tag-line"></span>
+          <span class="tag-text">Vamos celebrar o amor</span>
+          <span class="tag-line"></span>
+        </div>
+
+        <!-- Couple Names -->
+        <h1 class="hero-title font-serif-custom">Ysabele
+& Guilherme</h1>
+
+        <!-- Short Date & Location -->
+        <p class="hero-date">
+          01 · 05 · 2027 • Florianópolis
+        </p>
+
+        <!-- Decorative Dot -->
+        <div class="decorative-dot"></div>
+
+        <!-- Scroll Instruction -->
+        <p class="hero-scroll-desc">
+          Role para descobrir todos os detalhes do nosso dia.
+        </p>
+      </div>
+
+      <!-- Wave Transition Bottom -->
+      <div class="wave-bottom-wrapper">
+        <svg class="wave-divider" viewBox="0 0 390 18" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 18C130 0 260 0 390 18V18H0V18Z" fill="#F7F3EC"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== 2. NOSSA HISTÓRIA ==================== -->
+    <section class="history-section">
+      
+      <!-- Couple Intro Story -->
+      <div class="history-intro">
+        <div class="history-intro-header">
+          <span class="sub-tag">Dois caminhos, um destino</span>
+          <h2 class="section-title font-serif-custom">Nossa história</h2>
+        </div>
+        <p class="history-text">
+          Chegar até aqui foi a melhor jornada das nossas vidas, mas o nosso 'para sempre' está apenas começando. Preparamos este momento com todo o carinho do mundo para celebrar quem somos e a alegria de ter vocês ao nosso lado nessa história.
+        </p>
+      </div>
+
+      <!-- Couple Photo Banner -->
+      <div class="couple-photo-banner">
+        <!-- <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=800" alt="Casal na praia"> -->
+         <img src="./images/praia.jpeg" alt="Casal na praia">
+      </div>
+
+      <!-- Message to Family -->
+      <div class="family-message-box">
+        <!-- Symbol Badge -->
+        <div class="symbol-badge">
+          <i class="ph-heart-fill" style="font-size: 20px; color: #6F9591;"></i>
+        </div>
+
+        <!-- Main Quote -->
+        <blockquote class="quote-text font-serif-custom">
+          "A felicidade só é completa quando pode ser compartilhada com quem faz parte da nossa história."
+        </blockquote>
+
+        <!-- Separator -->
+        <div class="separator-line"></div>
+
+        <!-- Gratitude Text -->
+        <p class="gratitude-text">
+          Mais do que uma comemoração, queremos que este dia seja leve, divertido e cheio de memórias inesquecíveis. Queremos rir, comer bem e curtir cada segundo com cada um de vocês.
+        </p>
+
+        <!-- Signature -->
+        <div class="signature-container">
+          <span class="sig-dot"></span>
+          <span class="signature-text font-serif-custom">Com carinho, Marina e Tomás</span>
+          <span class="sig-dot"></span>
+        </div>
+      </div>
+
+      <!-- Photo Gallery / Moments -->
+      <div class="gallery-container">
+        <!-- Gallery Header -->
+        <div class="gallery-header">
+          <span class="sub-tag">Momentos</span>
+          <h3 class="section-title font-serif-custom">Nossa jornada em fotos</h3>
+        </div>
+
+        <!-- Gallery Rows (Polaroids) -->
+        <div class="gallery-rows">
+          <!-- Row 1 -->
+          <div class="gallery-row">
+            <div class="polaroid-card shadow-polaroid rot-1">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=400" alt="Momento 1">
+            </div>
+            <div class="polaroid-card shadow-polaroid rot-2">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=400" alt="Momento 2">
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="gallery-row">
+            <div class="polaroid-card shadow-polaroid rot-3">
+              <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80&w=400" alt="Momento 3">
+            </div>
+            <div class="polaroid-card shadow-polaroid rot-4">
+              <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&q=80&w=400" alt="Momento 4">
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="gallery-row">
+            <div class="polaroid-card shadow-polaroid rot-5">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=400" alt="Momento 5">
+            </div>
+            <div class="polaroid-card shadow-polaroid rot-6">
+              <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&q=80&w=400" alt="Momento 6">
+            </div>
+          </div>
+        </div>
+
+        <!-- See More Button -->
+        <button class="btn-see-more">
+          <i class="ph-arrow-left"></i>
+          <span>Ver mais</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ==================== 3. O CONVITE ==================== -->
+    <section class="invite-section">
+      
+      <!-- Section Title -->
+      <div class="invite-header">
+        <span class="sub-tag">Save the date</span>
+        <h2 class="section-title font-serif-custom">O nosso sim
+merece um brinde</h2>
+      </div>
+
+      <!-- Main Event Card -->
+      <div class="event-card">
+        <div class="card-icon-badge">
+          <i class="ph-sparkle-fill" style="font-size: 20px;"></i>
+        </div>
+
+        <p class="card-intro-text">Com alegria, convidamos você para o nosso</p>
+        
+        <h3 class="event-type-title font-serif-custom">Noivado</h3>
+
+        <div class="card-divider"></div>
+
+        <!-- Date Display Grid -->
+        <div class="date-grid">
+          <div class="date-col">
+            <span class="date-day-name">Sábado</span>
+            <span class="date-month">maio</span>
+          </div>
+
+          <div class="date-v-divider"></div>
+
+          <div class="date-day-number font-serif-custom">
+            01
+          </div>
+
+          <div class="date-v-divider"></div>
+
+          <div class="date-col">
+            <span class="date-year">2027</span>
+            <span class="date-time">16h00</span>
+          </div>
+        </div>
+
+        <div class="card-divider"></div>
+
+        <!-- Location Summary -->
+        <div class="location-summary">
+          <h4 class="venue-name">Espaço Nix</h4>
+          <p class="venue-address">
+            Rua Eliza Matos de Carvalho, 333 <br/>
+            Conceição, Osasco - SP, 06140-220
+          </p>
+        </div>
+
+        <!-- Dress Code Indicator -->
+        <div class="dress-code-badge">
+          <span class="dress-code-dot"></span>
+          <span class="dress-code-text">Traje: Esporte fino casual</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== 4. LOCAL E ORIENTAÇÕES ==================== -->
+    <section class="location-section">
+      
+      <!-- Venue Image -->
+      <div class="venue-image-box">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800" alt="Local do evento">
+      </div>
+
+      <!-- Map Button -->
+      <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-map">
+        <i class="ph-map-pin" style="font-size: 18px;"></i>
+        <span>Abrir rota no mapa</span>
+      </a>
+
+      <!-- Event Highlights / Practical Tips -->
+      <div class="features-list">
+        <h3 class="features-title font-serif-custom">
+          O que vai rolar na festa (prepare-se!)
+        </h3>
+
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="ph-pizza" style="font-size: 24px;"></i>
+          </div>
+          <div>
+            <h4 class="feature-name">Rodízio de pizza</h4>
+            <p class="feature-desc">Pizzas salgadas e doces para encher o bucho</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <i class="ph-game-controller" style="font-size: 24px;"></i>
+          </div>
+          <div>
+            <h4 class="feature-name">Jogos</h4>
+            <p class="feature-desc">Mesa de sinuca e Pôquer para os mais competitivos</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <span style="font-size: 20px;">🏆</span>
+          </div>
+          <div>
+            <h4 class="feature-name">Brindes</h4>
+            <p class="feature-desc">Brincadeiras com brindes para animar a pista</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== 5. MENSAGEM À FAMÍLIA ==================== -->
+    <section class="selection-section">
+      <div class="card-icon-badge" style="background-color: #F7F3EC;">
+        <i class="ph-heart" style="font-size: 20px; color: #6F9591;"></i>
+      </div>
+
+      <span class="sub-tag">Seleção a dedo</span>
+      
+      <h3 class="section-title font-serif-custom">
+        Pessoas importantes para nós
+      </h3>
+
+      <div class="selection-divider"></div>
+
+      <p class="selection-desc">
+        Escolhemos cada pessoa que faz parte da nossa história. Se você está nesta lista, saiba que tem um lugar mais do que especial no nosso coração!
+      </p>
+
+      <div class="guest-box">
+        <p class="guest-title">Convidado(s) especial(is):</p>
+        <ul class="guest-list">
+          <li class="guest-item"><i class="ph-check" style="color: #6F9591;"></i> <span>Convidado 1</span></li>
+          <li class="guest-item"><i class="ph-check" style="color: #6F9591;"></i> <span>Convidado 2</span></li>
+        </ul>
+      </div>
+
+      <p class="selection-footer-note">
+        Ter vocês por perto para dar esse passo tão grande significa muito para nós.
+      </p>
+    </section>
+
+        <!-- ==================== 5. RECADO CONFIRMAÇÃO PRESENÇA  ==================== -->
+    <section class="recadoconfirmacao-section">
+      <div class="card-icon-badge" style="background-color: #F7F3EC;">
+        <i class="ph-heart" style="font-size: 20px; color: #6F9591;"></i>
+      </div>
+
+      <span class="sub-tag">lista de presentes</span>
+      
+      <h3 class="section-title font-serif-custom">
+        Confirmação de presença
+      </h3>
+
+      <div class="recadoconfirmacao-divider"></div>
+
+      <p class="recadoconfirmacao-desc">
+        Para que nossa festa seja perfeita e possamos organizar todos os detalhes com muito carinho, a confirmação de presença está vinculada à nossa lista de presentes. 
+        <br>
+        <br>
+      Assim, você já garante o seu lugar na festa e nos ajuda a dar o start na nossa nova vida a dois!
+      </p>
+
+    </section>
+
+    <!-- ==================== 6. LISTA DE PRESENTES ==================== -->
+    <section class="gifts-section">
+      
+      <!-- Gift Header -->
+      <div class="gift-header">
+        <div class="card-icon-badge">
+          <i class="ph-gift" style="font-size: 20px;"></i>
+        </div>
+        <span class="sub-tag">Lista de presentes</span>
+
+        <h2 class="section-title font-serif-custom">Lista de Presentes</h2>
+
+        <div class="recadoconfirmacao-divider" style="margin: auto;"></div>
+
+
+        <p class="gift-intro">
+          Para que nossa festa seja perfeita e possamos organizar todos os detalhes com muito carinho, a confirmação de presença está vinculada à nossa lista de presentes.
+        </p>
+      </div>
+
+      <!-- Gift Cards Grid -->
+      <div class="gifts-grid">
+        
+        <!-- Card 1 -->
+        <div class="gift-card">
+          <img src="./images/ferrari.jfif" class="gift-img-box">
+            <i class="ph-device-tablet" style="font-size: 30px;"></i>
+          </img>
+          <div>
+            <h4 class="gift-name">Lavar louça</h4>
+            <p class="gift-price">R$ 2.890,00</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="gift-card">
+          <img src="./images/microondas.jfif" class="gift-img-box">
+            <i class="ph-cooking-pot" style="font-size: 30px;"></i>
+          </img>
+          <div>
+            <h4 class="gift-name">Conjunto de louças</h4>
+            <p class="gift-price">R$ 1.240,00</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="gift-card">
+          <img src="./images/geladeira.jfif" class="gift-img-box">
+            <i class="ph-coffee" style="font-size: 30px;"></i>
+          </img>
+          <div>
+            <h4 class="gift-name">Cafeteira expresso</h4>
+            <p class="gift-price">R$ 980,00</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="gift-card">
+          <img src="./images/air-fryer.jfif" class="gift-img-box">
+            <i class="ph-bed" style="font-size: 30px;"></i>
+          </img>
+          <div>
+            <h4 class="gift-name">Kit de lençóis</h4>
+            <p class="gift-price">R$ 420,00</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Alternative Contact -->
+       <button class="whatsapp-contact-btn">
+         
+         <a href="https://wa.me/5511973233031" target="_blank" class="whatsapp-contact">
+           <i class="ph-whatsapp-logo icon-whatsapp"></i>
+           <span>Prefere falar com a gente? (11) 97323-3031</span>
+         </a>
+       </button>
+
+    </section>
+
+    <!-- ==================== 7. CONFIRMAÇÃO DE PRESENÇA (RSVP) ==================== -->
+    <section id="rsvp" class="rsvp-section">
+      
+      <!-- Header -->
+      <div class="rsvp-header">
+        <span class="sub-tag">R.S.V.P.</span>
+        <h2 class="section-title font-serif-custom">Você vem
+celebrar conosco?</h2>
+        <p class="rsvp-deadline">Confirme até 28 de março de 2027.</p>
+      </div>
+
+      <!-- Form Container -->
+      <form onsubmit="event.preventDefault();" class="rsvp-form">
+        
+        <!-- Field: Guest Names -->
+        <div class="form-group">
+          <label class="form-label">Nome dos convidados</label>
+          <input type="text" placeholder="Guilherme" class="form-input input-mb" style="pointer-events: none;">
+          <input type="text" placeholder="Ysabele" class="form-input" style="pointer-events: none";>
+        </div>
+
+        <!-- Field: Attendance -->
+        <div class="form-group">
+          <label class="form-label" style="margin-bottom: 8px;">Poderá comparecer?</label>
+          <div class="radio-grid">
+            <label class="radio-card radio-card-active">
+              <input type="radio" name="attendance" value="sim" checked>
+              <span>Sim, irá comparecer</span>
+            </label>
+            <label class="radio-card radio-card-inactive">
+              <input type="radio" name="attendance" value="nao">
+              <span>Não poderá</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Field: Message -->
+        <div class="form-group">
+          <label class="form-label">Recado</label>
+          <textarea rows="3" placeholder="Conte para a gente (opcional)" class="form-textarea"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="alert('Obrigado por confirmar sua presença!')" class="btn-submit-rsvp">
+          Confirmar presença
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- ==================== 8. ENCERRAMENTO & RODAPÉ ==================== -->
+    <footer class="footer-section">
+      
+      <!-- Beach Farewell Banner -->
+      <div class="farewell-banner">
+        <div class="bg-banner-img"></div>
+        <div class="bg-banner-dark"></div>
+
+        <div class="farewell-content">
+          <i class="ph-sparkle farewell-icon"></i>
+          <h3 class="farewell-title font-serif-custom">Esperamos você
+de braços abertos</h3>
+          <p class="farewell-desc">
+            Vai ser lindo brindar ao amor, à família e a tudo o que ainda vamos viver juntos.
+          </p>
+          <p class="farewell-couple-names font-serif-custom">
+            Ysabele & Guilherme
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="footer-info">
+        <!-- Monogram -->
+        <div class="footer-monogram font-serif-custom">
+          Y · G
+        </div>
+        
+        <p class="footer-date">
+          12 de abril de 2027 · Florianópolis
+        </p>
+        
+        <p class="footer-thanks">
+          Obrigado por fazer parte desse sonho!
+        </p>
+
+        <div class="footer-heart">
+          <i class="ph-heart-fill"></i>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
